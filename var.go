@@ -7,5 +7,5 @@ var (
 	OPT      = "opa=0&zoom=12&leg=0&ext=0"
 	SS       = "/tmp/amagumo_takamatsu.png"
 	TRIM     = "/tmp/trim_takamatsu.png"
-	SCORE    = 5000
+	SCORE    = 20000
 )
