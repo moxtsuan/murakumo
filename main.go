@@ -19,7 +19,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(s)
 	if s > SCORE {
 		os.Exit(1)
 	} else {
