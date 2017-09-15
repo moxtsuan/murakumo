@@ -9,7 +9,16 @@ import (
 
 var (
 	ccdisp = flag.Bool("d", false, "Display Color Count")
+
+	exitCode = 0
 )
+
+func scoreCheck(s int) {
+	if s > SCORE {
+		exitCode = 2
+	}
+	return
+}
 
 func main() {
 	flag.Parse()
@@ -29,9 +38,6 @@ func main() {
 	if *ccdisp {
 		fmt.Println(s)
 	}
-	if s > SCORE {
-		os.Exit(1)
-	} else {
-		os.Exit(0)
-	}
+	scoreCheck(s)
+	os.Exit(exitCode)
 }
