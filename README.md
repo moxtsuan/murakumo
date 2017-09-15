@@ -5,6 +5,7 @@ Rain Cloud Detect in Japan
 
 ## Requirement
 
+- *nix
 - PhantomJS
 
 ## Installation
@@ -29,3 +30,7 @@ LAT = "lat=34.77274096606007"
 ```
 $ murakumo [-d]
 ```
+
+## License
+
+MIT License
