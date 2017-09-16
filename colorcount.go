@@ -36,6 +36,43 @@ func toRGBA(c color.Color) (rgba color.RGBA) {
 	return
 }
 
+func rgbToInteger(r, g, b uint8) (i int) {
+	i = (int)(r)
+	i <<= 8
+	i += (int)(g)
+	i <<= 8
+	i += (int)(b)
+	return
+}
+
+func limSet(v uint8, i int) uint8 {
+	if (int)(v)+i < 0 {
+		return 0
+	} else if (int)(v)+i > 255 {
+		return 255
+	} else {
+		return v + (uint8)(i)
+	}
+}
+
+func appColSearch(c color.RGBA, rx color.RGBA) bool {
+	r := rx.R
+	g := rx.G
+	b := rx.B
+	ci := toInteger(c)
+
+	for i := -APP_RANGE; i <= APP_RANGE; i++ {
+		tr := limSet(r, i)
+		tg := limSet(g, i)
+		td := limSet(b, i)
+		xi := rgbToInteger(tr, tg, td)
+		if ci == xi {
+			return true
+		}
+	}
+	return false
+}
+
 func ColorCount() (int, error) {
 	var w int
 	f, err := os.Open(TRIM)
@@ -49,23 +86,19 @@ func ColorCount() (int, error) {
 		for x := bounds.Min.X; x < bounds.Max.X; x++ {
 			c := color.RGBAModel.Convert(img.At(x, y))
 			rgba := toRGBA(c)
-			i := toInteger(rgba)
-			switch i {
-			case toInteger(r1):
+			if appColSearch(rgba, r1) {
 				w += 1
-			case toInteger(r5):
+			} else if appColSearch(rgba, r5) {
 				w += 5
-			case toInteger(r10):
+			} else if appColSearch(rgba, r10) {
 				w += 10
-			case toInteger(r20):
+			} else if appColSearch(rgba, r20) {
 				w += 20
-			case toInteger(r30):
+			} else if appColSearch(rgba, r30) {
 				w += 30
-			case toInteger(r50):
+			} else if appColSearch(rgba, r50) {
 				w += 50
-			case toInteger(r80):
-				w += 80
-			case toInteger(r100):
+			} else if appColSearch(rgba, r100) {
 				w += 100
 			}
 		}
