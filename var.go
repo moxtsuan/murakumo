@@ -8,5 +8,5 @@ var (
 	SS        = "/tmp/amagumo_takamatsu.png"
 	TRIM      = "/tmp/trim_takamatsu.png"
 	SCORE     = 20000
-	APP_RANGE = 5
+	APP_RANGE = 3
 )

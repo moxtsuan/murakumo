@@ -62,12 +62,16 @@ func appColSearch(c color.RGBA, rx color.RGBA) bool {
 	ci := toInteger(c)
 
 	for i := -APP_RANGE; i <= APP_RANGE; i++ {
-		tr := limSet(r, i)
-		tg := limSet(g, i)
-		td := limSet(b, i)
-		xi := rgbToInteger(tr, tg, td)
-		if ci == xi {
-			return true
+		for j := -APP_RANGE; j <= APP_RANGE; j++ {
+			for k := -APP_RANGE; k <= APP_RANGE; k++ {
+				tr := limSet(r, i)
+				tg := limSet(g, j)
+				td := limSet(b, k)
+				xi := rgbToInteger(tr, tg, td)
+				if ci == xi {
+					return true
+				}
+			}
 		}
 	}
 	return false
