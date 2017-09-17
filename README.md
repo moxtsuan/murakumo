@@ -49,3 +49,22 @@ $ murakumo [-d] [-l] location
 ## License
 
 MIT License
+
+## Library
+[agouti](https://github.com/sclevine/agouti)
+
+>
+>The MIT License(MIT)<br>
+>Copyright (c) 2014 Stephen Levine
+
+- License: The MIT License(MIT)
+- Full Text: [agouti/LICENSE](https://github.com/sclevine/agouti/blob/master/LICENSE)
+
+[cutter](https://github.com/oliamb/cutter)
+
+>
+>The MIT License(MIT)<br>
+>Copyright (c) 2014 Olivier Amblet
+
+- License: The MIT License(MIT)
+- Full Text: [cutter/LICENSE](https://github.com/oliamb/cutter/blob/master/LICENSE)
