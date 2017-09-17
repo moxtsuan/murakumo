@@ -10,10 +10,24 @@ func getImage(loc string) error {
 	switch loc {
 	case "tokyo":
 		l = location.Tokyo
+	case "sapporo":
+		l = location.Sapporo
+	case "sendai":
+		l = location.Sendai
+	case "nigata":
+		l = location.Nigata
+	case "nagoya":
+		l = location.Nagoya
 	case "osaka":
 		l = location.Osaka
+	case "okayama":
+		l = location.Okayama
 	case "takamatsu":
 		l = location.Takamatsu
+	case "fukuoka":
+		l = location.Hakata
+	case "naha":
+		l = location.Naha
 	default:
 		l = location.Tokyo
 	}
