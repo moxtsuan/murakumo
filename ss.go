@@ -29,7 +29,7 @@ func getImage(loc string) error {
 	case "naha":
 		l = location.Naha
 	default:
-		l = location.Tokyo
+		l = LOC
 	}
 	url := BASE_URL + "lon=" + l.LON + "&lat=" + l.LAT + "&" + OPT
 	driver := agouti.PhantomJS()

@@ -3,7 +3,7 @@ package location
 type Location struct {
 	LON  string
 	LAT  string
-	zoom string
+	ZOOM string
 }
 
 var (
