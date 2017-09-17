@@ -1,6 +1,7 @@
 package main
 
 import (
+	//"fmt"
 	"image/color"
 	"image/png"
 	"os"
@@ -10,8 +11,8 @@ var (
 	r1   = color.RGBA{153, 255, 255, 0}
 	r5   = color.RGBA{103, 205, 255, 0}
 	r10  = color.RGBA{30, 146, 255, 0}
-	r20  = color.RGBA{38, 0, 255, 0}
-	r30  = color.RGBA{248, 252, 0, 0}
+	r20  = color.RGBA{0, 56, 255, 0}
+	r30  = color.RGBA{250, 245, 0, 0}
 	r50  = color.RGBA{255, 147, 0, 0}
 	r80  = color.RGBA{252, 0, 0, 0}
 	r100 = color.RGBA{154, 0, 121, 0}
@@ -60,6 +61,7 @@ func appColSearch(c color.RGBA, rx color.RGBA) bool {
 	g := rx.G
 	b := rx.B
 	ci := toInteger(c)
+	//fmt.Printf("R:%d G:%d B:%d\n", c.R, c.G, c.B)
 
 	for i := -APP_RANGE; i <= APP_RANGE; i++ {
 		for j := -APP_RANGE; j <= APP_RANGE; j++ {
