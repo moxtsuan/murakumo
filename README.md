@@ -5,7 +5,7 @@ Rain Cloud Detect in Japan
 
 ## Requirement
 
-- *nix
+- \*nix
 - PhantomJS
 
 ## Installation
@@ -27,8 +27,23 @@ LAT = "lat=34.77274096606007"
 
 'd'option shows a rain cloud score.
 
+'l'option sets location.
+
 ```
-$ murakumo [-d]
+tokyo
+sapporo
+sendai
+nigata
+nagoya
+osaka
+okayama
+takamatsu
+hakata
+naha
+```
+
+```
+$ murakumo [-d] [-l] location
 ```
 
 ## License
