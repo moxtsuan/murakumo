@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
 	"image/color"
 	"image/png"
 	"os"
@@ -61,7 +61,7 @@ func appColSearch(c color.RGBA, rx color.RGBA) bool {
 	g := rx.G
 	b := rx.B
 	ci := toInteger(c)
-	fmt.Printf("R:%d G:%d B:%d\n", c.R, c.G, c.B)
+	//fmt.Printf("R:%d G:%d B:%d\n", c.R, c.G, c.B)
 
 	for i := -APP_RANGE; i <= APP_RANGE; i++ {
 		for j := -APP_RANGE; j <= APP_RANGE; j++ {
