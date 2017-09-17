@@ -17,17 +17,17 @@ $ go get github.com/moxtsuan/murakumo
 ## Usage
 
 Set location in var.go you want to survey.
+About LOC, first field is longitude, second is latitude, third is zoom(now is dummy).
 
 ### example
 ```
 // Suita City
-LON = "lon=135.5266571044922"
-LAT = "lat=34.77274096606007"
+LOC = location.Location{"135.5266571044922", "34.77274096606007", "12"}
 ```
 
 'd'option shows a rain cloud score.
 
-'l'option sets location.
+'l'option sets location. Default is LOC in var.go.
 
 ```
 tokyo
