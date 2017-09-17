@@ -9,6 +9,7 @@ import (
 
 var (
 	ccdisp = flag.Bool("d", false, "Display Color Count")
+	setloc = flag.String("l", "takamatsu", "Set Location")
 
 	exitCode = 0
 )
@@ -23,7 +24,9 @@ func scoreCheck(s int) {
 func main() {
 	flag.Parse()
 
-	err := ScrShot()
+	loc := *setloc
+
+	err := ScrShot(loc)
 	if err != nil {
 		log.Fatal(err)
 	}
