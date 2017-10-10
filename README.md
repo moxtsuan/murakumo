@@ -5,7 +5,6 @@ Rain Cloud Detect in Japan
 
 ## Requirement
 
-- \*nix
 - PhantomJS
 
 ## Installation
