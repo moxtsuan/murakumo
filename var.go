@@ -10,6 +10,6 @@ var (
 	OPT       = "opa=0&zoom=12&leg=0&ext=0"
 	SS        = "/tmp/amagumo_murakumo.png"
 	TRIM      = "/tmp/trim_murakumo.png"
-	SCORE     = 20000
+	SCORE     = 30000
 	APP_RANGE = 3
 )
